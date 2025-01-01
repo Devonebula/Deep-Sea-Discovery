@@ -1,0 +1,474 @@
+/* universal tags */
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Baloo Bhai 2', cursive;
+  background-color: black;
+}
+
+
+
+/* top nav and background css */
+
+
+.background-container {
+  height: 90vh;
+  background-image: url(Images/sea\ and\ ocean\ life-3.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  opacity: 1;
+  z-index: 1;
+  display: block;
+}
+.nav {
+  height: 15vh;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 10;
+}
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  background-color: #0000005e;
+}
+
+.nav:hover {
+  background-color: #e0f7fad8;
+  z-index: 10;
+  .nav_items a {
+    color: black;
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img {
+  width: 100px;
+  height: 100px;
+  margin-top: 8px;
+}
+.nav_items {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  justify-content: center;
+}
+
+.nav_items a {
+  text-decoration: none;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  position: relative;
+}
+
+.right .nav_items a:nth-child(4){
+  margin-right: 10px;
+}
+.nav_items a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: scaleX(0);
+}
+
+.nav_items a:hover::after {
+  width: 100%;
+  transform: scaleX(1);
+}
+
+.nav .left {
+  width: 33.33%;
+  display: flex;
+}
+
+.nav .middle {
+  margin: auto;
+  width: 33.33%;
+}
+.nav .right {
+  margin: auto;
+  width: 33.33%;
+
+}
+.left .nav_items a {
+  display: flex;
+  align-items: center;
+}
+.left .nav_items {
+  padding-left: 55px;
+}
+
+.bg-card {
+  background-color: transparent;
+  width: 45vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bg-card span {
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bg-card :nth-child(1) {
+  font-size: 60px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.bg-card :nth-child(2) {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.bg-card :nth-child(3) {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+
+/* seperator css */
+
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 20;
+  box-shadow: #ffffff 0px 3px 5px;
+}
+
+
+
+/* Portfolio Section Styles */
+
+
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #e0f7fad8; 
+  position: relative;
+}
+
+.portfolio .ocean-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+}
+
+.portfolio .ocean-content {
+  flex: 1;
+  color: #014d64;
+  text-align: left;
+  font-family: 'Baloo Bhai 2', cursive;
+}
+
+.portfolio .ocean-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.portfolio .ocean-content p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.portfolio .ocean-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('Images/overlay-pattern.jpg') repeat;
+  opacity: 0.1;
+}
+
+
+
+
+/* Ocean Section Styles */
+
+
+.ocean {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #e0f7fad8; 
+  position: relative;
+
+}
+
+.ocean-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+.ocean .ocean-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+
+.ocean-content {
+  flex: 1;
+  color: #014d64;
+  text-align: left;
+  font-family: 'Baloo Bhai 2', cursive;
+}
+
+.ocean-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.ocean-content p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+.ocean-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ocean::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('Images/overlay-pattern.jpg') repeat;
+  opacity:0.1;
+}
+
+
+
+/* .shipwrecks style css */
+
+
+.shipwrecks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #e0f7fad8; 
+  position: relative;
+}
+
+.shipwrecks .ocean-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+}
+
+.shipwrecks .ocean-content {
+  flex: 1;
+  color: #014d64;
+  text-align: left;
+  font-family: 'Baloo Bhai 2', cursive;
+}
+
+.shipwrecks .ocean-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.shipwrecks .ocean-content p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+
+.shipwrecks .ocean-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.shipwrecks::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('Images/overlay-pattern.jpg') repeat;
+  opacity: 0.1;
+}
+
+
+
+
+
+
+/* Contact Section Styles */
+
+
+.contact {
+  background-color: #f9f9f9; 
+  padding: 60px 20px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+}
+
+.contact h2 {
+  font-size: 2.2em;
+  color: #014d64;
+  margin-bottom: 20px;
+  font-family: 'Baloo Bhai 2', cursive;
+  text-align: left;
+}
+
+.contact form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #333;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  border-color: #0288d1;
+  outline: none;
+}
+
+.contact form button {
+  background-color: #0288d1;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact form button:hover {
+  background-color: #026aa7;
+  transform: scale(1.05);
+}
+
+.contact-image {
+  flex: 1;
+  max-width: 500px;
+}
+
+.contact-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-left: 50px;
+}
+
+#successMessage {
+  font-size: 1em;
+  font-family: 'Roboto Mono', monospace;
+  margin-top: 10px;
+  color: green; 
+  display: none;
+}
+
+/* Footer Styles */
+
+
+.footer {
+  background-color: #1b1b1b; 
+  color: #f5f5f5;
+  text-align: center;
+  padding: 20px 0;
+  font-family: 'Roboto Mono', monospace;
+  border-top: 1px solid #333;
+}
+
+.footer p {
+  font-size: 0.9em;
+  color: #ccc;
+}
+
